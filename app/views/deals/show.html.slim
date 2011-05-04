@@ -1,0 +1,33 @@
+p#notice = notice
+
+p
+  b Title:
+  = @deal.title
+p
+  b Description:
+  = @deal.description
+p
+  b Original price:
+  = @deal.original_price
+p
+  b Deal price:
+  = @deal.deal_price
+p
+  b Store:
+  = @deal.store_id
+p
+  b Start at:
+  = @deal.start_at
+p
+  b End at:
+  = @deal.end_at
+p
+  b Max purchases:
+  = @deal.max_purchases
+p
+  b Min purchases:
+  = @deal.min_purchases
+
+= link_to 'Edit', edit_deal_path(@deal)
+'|
+= link_to 'Back', deals_path

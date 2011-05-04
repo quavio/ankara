@@ -1,4 +1,6 @@
 Ankara::Application.routes.draw do
+  resources :deals
+
   match '/auth/:provider/callback', :to => 'sessions#callback'
 
   # The priority is based upon order of creation:

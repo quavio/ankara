@@ -1,0 +1,35 @@
+h1 Listing deals
+
+table
+  tr
+    th Title
+    th Description
+    th Original price
+    th Deal price
+    th Store
+    th Start at
+    th End at
+    th Max purchases
+    th Min purchases
+    th
+    th
+    th
+
+  - @deals.each do |deal|
+    tr
+      td= deal.title
+      td= deal.description
+      td= deal.original_price
+      td= deal.deal_price
+      td= deal.store_id
+      td= deal.start_at
+      td= deal.end_at
+      td= deal.max_purchases
+      td= deal.min_purchases
+      td= link_to 'Show', deal
+      td= link_to 'Edit', edit_deal_path(deal)
+      td= link_to 'Destroy', deal, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Deal', new_deal_path
